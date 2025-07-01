@@ -1,0 +1,333 @@
+/* تنسيقات عامة */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    color: #5d4037;
+    font-size: 2.2rem;
+    margin-top: 15px;
+}
+
+.logo {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* تنسيقات صفحة الطاولة */
+.table-selection {
+    text-align: center;
+    margin-top: 50px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-selection h2 {
+    margin-bottom: 20px;
+    color: #5d4037;
+}
+
+.table-selection input {
+    padding: 12px 15px;
+    font-size: 18px;
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #d7ccc8;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.table-selection input:focus {
+    border-color: #5d4037;
+    outline: none;
+}
+
+.table-selection button {
+    background-color: #5d4037;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s;
+    width: 100%;
+    font-weight: 500;
+}
+
+.table-selection button:hover {
+    background-color: #3e2723;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* تنسيقات صفحة القائمة */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #8d6e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #6d4c41;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.categories button {
+    background-color: #d7ccc8;
+    color: #5d4037;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.categories button.active {
+    background-color: #5d4037;
+    color: white;
+}
+
+.categories button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.product-emoji {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.product-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h3 {
+    color: #5d4037;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.price {
+    font-weight: bold;
+    color: #d32f2f;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    justify-content: center;
+}
+
+.quantity-control button {
+    background-color: #5d4037;
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.quantity-control button:hover {
+    background-color: #3e2723;
+    transform: scale(1.1);
+}
+
+.quantity-control span {
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d7ccc8;
+    border-radius: 8px;
+    resize: vertical;
+    min-height: 80px;
+    margin-top: 10px;
+    font-family: 'Tajawal', sans-serif;
+}
+
+textarea:focus {
+    border-color: #5d4037;
+    outline: none;
+}
+
+.order-summary {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    bottom: 20px;
+}
+
+.order-summary h2 {
+    color: #5d4037;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 1.4rem;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #eee;
+    align-items: center;
+}
+
+.order-item p {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.total {
+    text-align: left;
+    margin: 20px 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #5d4037;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.order-summary button {
+    width: 100%;
+    padding: 15px;
+    background-color: #5d4037;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.order-summary button:hover {
+    background-color: #3e2723;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.order-summary button:disabled {
+    background-color: #bcaaa4;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* تنسيقات للهواتف */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .table-selection {
+        padding: 20px;
+    }
+    
+    .order-summary {
+        padding: 20px;
+    }
+}
